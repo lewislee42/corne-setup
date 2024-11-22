@@ -8,6 +8,43 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        move_to_window_1: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp NUMBER_1>;
+            label = "NEW_MACRO";
+        };
+
+        move_to_window_2: move_to_window_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp NUMBER_2>;
+            label = "MOVE_TO_WINDOW_2";
+        };
+
+        move_to_window_3: move_to_window_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp NUMBER_3>;
+            label = "MOVE_TO_WINDOW_3";
+        };
+
+        move_to_window_4: move_to_window_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp NUMBER_4>;
+            label = "MOVE_TO_WINDOW_4";
+        };
+
+        move_to_window_5: move_to_window_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp NUMBER_5>;
+            label = "MOVE_TO_WINDOW_5";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -34,10 +71,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE        &kp N1  &kp N2  &kp N3            &kp N4     &kp N5         &kp N6       &kp N7           &kp N8    &kp N9     &kp N0  &trans
-&kp LEFT_SHIFT    &trans  &trans  &trans            &trans     &trans         &kp LEFT     &kp DOWN         &kp UP    &kp RIGHT  &trans  &trans
-&kp LEFT_CONTROL  &trans  &trans  &trans            &trans     &trans         &trans       &trans           &trans    &trans     &trans  &trans
-                                  &kp LEFT_COMMAND  &lt 1 TAB  &lt 2 SPACE    &lt 3 ENTER  &lt 4 BACKSPACE  &kp RALT
+&kp ESCAPE        &kp N1             &kp N2             &kp N3             &kp N4             &kp N5               &kp N6       &kp N7           &kp N8    &kp N9     &kp N0  &trans
+&kp LEFT_SHIFT    &move_to_window_1  &move_to_window_2  &move_to_window_3  &move_to_window_4  &move_to_window_5    &kp LEFT     &kp DOWN         &kp UP    &kp RIGHT  &trans  &trans
+&kp LEFT_CONTROL  &trans             &trans             &trans             &trans             &trans               &trans       &trans           &trans    &trans     &trans  &trans
+                                                        &kp LEFT_COMMAND   &lt 1 TAB          &lt 2 SPACE          &lt 3 ENTER  &lt 4 BACKSPACE  &kp RALT
             >;
         };
 
