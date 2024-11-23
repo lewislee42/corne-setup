@@ -12,7 +12,7 @@
         tmux_leader: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp B>;
+            bindings = <&kp LC(B)>;
             label = "NEW_MACRO";
         };
 
